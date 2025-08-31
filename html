@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Free Fire: Estratégia Rumo ao Mestre</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+      color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #00ffcc;
+      text-shadow: 0 0 5px #00ffcc;
+    }
+
+    .section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #2a2a2a;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #000;
+      transition: transform 0.3s ease;
+    }
+
+    .section:hover {
+      transform: scale(1.02);
+    }
+
+    ul {
+      list-style-type: '🔥 ';
+      padding-left: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid #444;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #00ffcc;
+      color: #000;
+    }
+
+    td {
+      background-color: #333;
+    }
+
+    .highlight {
+      color: #ffcc00;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: #00ffcc;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #00ddb3;
+    }
+
+    .hidden {
+      display: none;
+      margin-top: 10px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔥 Estratégia Free Fire: Rumo ao Mestre</h1>
+
+  <div class="section">
+    <h2>🗺️ Mapa Ideal: Bermuda</h2>
+    <button class="btn" onclick="toggle('rota')">Ver rota de loot</button>
+    <div id="rota" class="hidden">
+      <ul>
+        <li><span class="highlight">Clock Tower</span>: loot rápido e ideal para rushadores.</li>
+        <li><span class="highlight">Factory</span>: transição estratégica com visão ampla.</li>
+        <li><span class="highlight">Bimasakti Strip</span>: centro do mapa, ótimo para dominar o safe.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🧬 Personagens para Squad Rushador</h2>
+    <button class="btn" onclick="toggle('squad')">Montar Squad</button>
+    <div id="squad" class="hidden">
+      <table>
+        <tr>
+          <th>Função</th>
+          <th>Personagem</th>
+          <th>Habilidade</th>
+        </tr>
+        <tr>
+          <td>Rushador</td>
+          <td>Alok</td>
+          <td>Cura em área + velocidade</td>
+        </tr>
+        <tr>
+          <td>Suporte</td>
+          <td>Jota</td>
+          <td>Recupera HP ao eliminar com SMG/AR</td>
+        </tr>
+        <tr>
+          <td>Flanco</td>
+          <td>Kelly (Despertada)</td>
+          <td>Velocidade + dano no primeiro tiro</td>
+        </tr>
+        <tr>
+          <td>Estrategista</td>
+          <td>Hayato (Despertado)</td>
+          <td>Mais dano com pouca vida</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🏋️ Rotina de Treino Diária</h2>
+    <button class="btn" onclick="toggle('treino')">Iniciar Treino</button>
+    <div id="treino" class="hidden">
+      <ul>
+        <li><span class="highlight">10 min</span> – Aquecimento: mira + movimentação com gelo.</li>
+        <li><span class="highlight">15 min</span> – Campo de tiro: subir capa com diferentes armas.</li>
+        <li><span class="highlight">15 min</span> – Treino de gelo rápido: agachado, pulando, correndo.</li>
+        <li><span class="highlight">20 min</span> – Partida ranqueada com foco em rotação e análise.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function toggle(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden');
+    }
+  </script>
+
+</body>
+</html>
